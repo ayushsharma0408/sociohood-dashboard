@@ -30,7 +30,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-export default function Sidebar() {
+export default function DesktopSidebar() {
   const [open, setOpen] = useState(true);
   const [openMenu, setOpenMenu] = useState(null);
   const [hoverMenu, setHoverMenu] = useState(null);

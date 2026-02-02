@@ -38,26 +38,26 @@ export default function VisitorManagement() {
   ];
 
   return (
-    <div className="p-6 space-y-6 bg-gray-50 min-h-screen">
+    <div className="p-3 sm:p-4 md:p-6 space-y-6 bg-gray-50 min-h-screen">
 
       {/* ================= HEADER ================= */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
 
-        <h1 className="text-xl font-semibold text-gray-800">
+        <h1 className="text-base sm:text-xl font-semibold text-gray-800 truncate">
           Gate Management &gt; Visitor
         </h1>
 
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-2">
 
-          <button className="px-4 py-1 rounded border border-blue-500 text-blue-600 bg-white">
+          <button className="px-3 py-1 rounded border border-blue-500 text-blue-600 bg-white text-xs sm:text-sm">
             All Visitor 3
           </button>
 
-          <button className="px-4 py-1 rounded border border-green-500 text-green-600 bg-white">
+          <button className="px-3 py-1 rounded border border-green-500 text-green-600 bg-white text-xs sm:text-sm">
             IN 0
           </button>
 
-          <button className="px-4 py-1 rounded border border-red-500 text-red-600 bg-white">
+          <button className="px-4 py-1 rounded border border-red-500 text-red-600 bg-white text-xs sm:text-sm">
             OUT 0
           </button>
 
@@ -66,35 +66,40 @@ export default function VisitorManagement() {
 
 
       {/* ================= FILTER ================= */}
-      <div className="bg-white p-4 rounded-lg shadow flex flex-wrap items-center gap-4">
+      <div className="bg-white p-3 sm:p-4 rounded-lg shadow flex flex-col sm:flex-row flex-wrap item-start sm:items-center gap-3">
 
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-medium">Start Date</span>
+        <div className="flex items-center gap-2 w-full sm:w-auto">
+          <span className="text-sm font-medium whitespace-nowrap">Start Date</span>
           <input
             type="date"
-            className="border px-3 py-1 rounded text-sm"
+            className="border px-3 py-1 rounded text-sm w-full sm:w-auto"
           />
         </div>
 
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-medium">End Date</span>
+        <div className="flex items-center gap-2 w-full sm:w-auto">
+          <span className="text-sm font-medium whitespace-nowrap">End Date</span>
           <input
             type="date"
-            className="border px-3 py-1 rounded text-sm"
+            className="border px-3 py-1 rounded text-sm w-full sm:w-auto"
           />
         </div>
 
-        <button className="bg-blue-600 text-white px-4 py-1 rounded text-sm">
+        <div className="flex gap-2 w-full sm:w-auto">
+
+        <button className="bg-blue-600 text-white px-4 py-1 rounded text-sm flex-1 sm:flex-none">
           FIND
         </button>
 
-        <button className="bg-gray-200 px-4 py-1 rounded text-sm flex items-center gap-1">
+        <button className="bg-gray-200 px-4 py-1 rounded text-sm flex items-center gap-1 flex-1 sm:flex-none">
           <RotateCcw size={14} />
           RESET
         </button>
 
+        </div>
+        
+
         {/* Search */}
-        <div className="ml-auto relative">
+        <div className="relative w-full sm:w-60 sm:ml-auto">
 
           <Search
             size={16}
@@ -106,15 +111,18 @@ export default function VisitorManagement() {
             placeholder="search..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="border pl-9 pr-3 py-1 rounded text-sm"
+            className="border pl-9 pr-3 py-1 rounded text-sm w-full"
           />
         </div>
 
       </div>
 
+      
+
 
       {/* ================= TABLE ================= */}
       <div className="bg-white rounded-lg shadow overflow-x-auto">
+        <div className="min-w-[900px]">
 
         <table className="w-full text-sm">
 
@@ -179,6 +187,8 @@ export default function VisitorManagement() {
           </tbody>
 
         </table>
+
+        </div>
 
       </div>
 

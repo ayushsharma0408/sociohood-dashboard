@@ -2,26 +2,26 @@ import { RefreshCw, Search } from "lucide-react";
 
 export default function ResiderManagement() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 px-2 sm:px-4 md:px-0">
 
       {/* ====== Header ====== */}
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
-        <h2 className="text-lg font-semibold text-gray-700">
+        <h2 className="text-base sm:text-lg font-semibold text-gray-700 truncate">
           Gate Management &gt; <span className="text-black">Resider</span>
         </h2>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
 
-          <button className="px-4 py-1.5 border rounded-lg text-sm bg-white shadow">
+          <button className="px-3 py-1 border rounded-lg text-xs sm:text-sm bg-white shadow">
             All Resident <span className="text-green-600">0 ✓</span>
           </button>
 
-          <button className="px-4 py-1.5 border rounded-lg text-sm bg-white shadow">
+          <button className="px-3 py-1 border rounded-lg text-xs sm:text-sm bg-white shadow">
             IN 0
           </button>
 
-          <button className="px-4 py-1.5 border rounded-lg text-sm bg-white shadow text-red-600">
+          <button className="px-3 py-1 border rounded-lg text-sm sm:text-sm bg-white shadow text-red-600">
             OUT 0
           </button>
 
@@ -30,46 +30,48 @@ export default function ResiderManagement() {
 
 
       {/* ====== Filters ====== */}
-      <div className="bg-white rounded-xl shadow p-4 flex flex-wrap gap-4 items-end">
+      <div className="bg-white rounded-xl shadow p-3 sm:p-4 flex flex- col sm:flex-row flex-wrap gap-3 item-start sm:items-end">
 
-        <div>
+        <div className="w-full sm:auto">
           <label className="text-sm text-gray-500">
             Start Date
           </label>
 
           <input
             type="date"
-            className="block border rounded-lg px-3 py-1.5 mt-1 text-sm"
+            className="block border rounded-lg px-3 py-1.5 mt-1 text-sm w-full"
           />
         </div>
 
-        <div>
+        <div className="w-full sm:w-auto">
           <label className="text-sm text-gray-500">
             End Date
           </label>
 
           <input
             type="date"
-            className="block border rounded-lg px-3 py-1.5 mt-1 text-sm"
+            className="block border rounded-lg px-3 py-1.5 mt-1 text-sm w-full"
           />
         </div>
 
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm">
+        <div className="flex gap-2 w-full sm:w-auto">
+        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm flex-1 sm:flex-none">
           FIND
         </button>
 
-        <button className="bg-gray-100 px-4 py-2 rounded-lg text-sm flex items-center gap-2">
+        <button className="bg-gray-100 px-4 py-2 rounded-lg text-sm flex items-center gap-2 flex-1 sm:flex-none">
           <RefreshCw size={16} />
           RESET
         </button>
+        </div>
 
 
         {/* Search */}
-        <div className="ml-auto relative">
+        <div className="sm:ml-auto w-full sm:w-60 relative">
 
           <input
             placeholder="search..."
-            className="border rounded-full pl-4 pr-10 py-2 text-sm"
+            className="border rounded-full pl-4 pr-10 py-2 text-sm w-full"
           />
 
           <Search
@@ -84,10 +86,11 @@ export default function ResiderManagement() {
 
       {/* ====== Table ====== */}
       <div className="bg-white rounded-xl shadow overflow-hidden">
+        <div className="overflow-x-auto">
 
 
         {/* Table Header */}
-        <div className="bg-blue-500 text-white text-sm px-4 py-3 grid grid-cols-10 gap-2 font-medium">
+        <div className="bg-blue-500 text-white text-sm px-4 py-3 grid grid-cols-10 min-w-[1000px] gap-2 font-medium">
 
           <div>Sr. No</div>
           <div>Resident Name</div>
@@ -101,10 +104,11 @@ export default function ResiderManagement() {
           <div>Mask</div>
 
         </div>
+        </div>
 
 
         {/* Empty State */}
-        <div className="text-center py-10 text-gray-500 text-sm">
+        <div className="text-center p-6 sm:py-10 text-gray-500 text-sm">
 
           No Residents
 

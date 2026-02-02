@@ -100,13 +100,13 @@ export default function MiniDashboardChart({ stats }) {
         },
 
         ticks: {
-          display: true, // ✅ SHOW Y-AXIS
+          display: true, // SHOW Y-AXIS
           color: "#4b5563",
           font: {
             size: 12,
             weight: "500",
           },
-          stepSize: 500, // spacing like real dashboard
+          stepSize: 500, 
         },
       },
     },

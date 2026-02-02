@@ -13,14 +13,14 @@ export default function Dashboard() {
         <div className="lg:col-span-3 space-y-6">
 
           {/* Welcome Card */}
-          <div className="bg-white rounded-xl shadow px-12 py-16 min-h-[280px] flex items-center">
+          <div className="bg-white rounded-xl lg:px-12 lg:py-16 sm:px-8 sm:py10 min-h-[220px] lg:min-h[280] flex items-center">
 
-            <div className="flex justify-between items-center w-full">
+            <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-6">
 
               {/* Left Text */}
-              <div className="max-w-xl space-y-4">
+              <div className="max-w-xl space-y-3 text-center lg:text-left">
 
-                <h1 className="text-3xl font-bold text-blue-500">
+                <h1 className="text-xl sm:text-base font-bold text-gray-600 leading-relaxed">
                   Welcome, Sociohood Technologies
                 </h1>
 

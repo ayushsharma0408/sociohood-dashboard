@@ -22,7 +22,7 @@ export default function StaffManagement() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 px-2 sm:px-4 md:px-0">
 
       {/* ================= HEADER ================= */}
       <div className="bg-white rounded-xl shadow p-5">
@@ -32,7 +32,7 @@ export default function StaffManagement() {
         </h2>
 
         {/* Filters */}
-        <div className="flex flex-wrap gap-4 items-end">
+        <div className="flex flex-col lg:flex-row lg:items-end gap-4">
 
           {/* Start Date */}
           <div>
@@ -41,7 +41,7 @@ export default function StaffManagement() {
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              className="block border rounded px-3 py-2 mt-1"
+              className="block border rounded px-3 py-2 mt-1 w-full sm:w-auto"
             />
           </div>
 
@@ -57,16 +57,16 @@ export default function StaffManagement() {
           </div>
 
           {/* Buttons */}
-          <button className="bg-blue-500 text-white px-5 py-2 rounded shadow hover:bg-blue-700">
+          <button className="bg-blue-500 text-white px-4 py-2 text-sm w-full sm:w-auto rounded shadow hover:bg-blue-700">
             FIND
           </button>
 
-          <button className="bg-gray-500 text-white px-5 py-2 rounded shadow hover:bg-gray-600">
+          <button className="bg-gray-500 text-white px-4 py-2 text-sm w-full sm:w-auto rounded shadow hover:bg-gray-600">
             RESET
           </button>
 
           {/* Status Cards */}
-          <div className="ml-auto flex gap-3">
+          <div className="lg:ml-auto flex flex-wrap gap-3 justify-start sm:justify-end">
 
             <StatusCard label="All Staff" count={1} color="blue" />
 
@@ -83,14 +83,14 @@ export default function StaffManagement() {
       <div className="bg-white rounded-xl shadow">
 
         {/* Search */}
-        <div className="p-4 flex justify-end">
+        <div className="p-4 flex justify-center sm:justify-end">
 
           <div className="relative">
 
             <input
               type="text"
               placeholder="Search..."
-              className="border rounded-full px-4 py-2 pl-10 w-64"
+              className="border rounded-full px-4 py-2 pl-10 w-full sm:w-64"
             />
 
             <Search
@@ -106,7 +106,7 @@ export default function StaffManagement() {
         {/* Table */}
         <div className="overflow-x-auto">
 
-          <table className="w-full border-collapse">
+          <table className="hidden md:table w-full border-collapse min-w-[1100px]">
 
             <thead className="bg-blue-500 text-white text-sm">
 
@@ -219,7 +219,7 @@ function StatusCard({ label, count, color }) {
 
   return (
     <div
-      className={`border-2 ${colors[color]} rounded-lg px-4 py-2 text-center min-w-[100px] bg-white shadow`}
+      className={`border-2 ${colors[color]} rounded-lg px-4 py-2 text-center min-w-[80px] sm:min-w-[100px] bg-white shadow`}
     >
       <p className="text-xs">{label}</p>
       <p className="font-bold">{count}</p>

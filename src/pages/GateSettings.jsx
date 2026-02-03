@@ -10,16 +10,15 @@ export default function GateSettings() {
 
 
       {/* ================= TABS ================= */}
-      <div className="bg-blue-500 rounded-xl p-1 flex overflow-x-auto whitespace-nowrap">
+      <div className="bg-blue-500 rounded-xl p-3 flex overflow-x-auto whitespace-nowrap">
 
         <button
           onClick={() => setActiveTab("guards")}
           className={`min-w-[120px] px-4 py-2 rounded-lg font-medium transition
-          ${
-            activeTab === "guards"
+          ${activeTab === "guards"
               ? "bg-white text-[#2f3699]"
               : "text-white"
-          }`}
+            }`}
         >
           All Guards
         </button>
@@ -27,11 +26,10 @@ export default function GateSettings() {
         <button
           onClick={() => setActiveTab("visitor")}
           className={`min-w-[120px] px-4 py-2 rounded-lg font-medium transition
-          ${
-            activeTab === "visitor"
+          ${activeTab === "visitor"
               ? "bg-white text-[#2f3699]"
               : "text-white"
-          }`}
+            }`}
         >
           Visitor Type
         </button>
@@ -39,11 +37,10 @@ export default function GateSettings() {
         <button
           onClick={() => setActiveTab("staff")}
           className={`min-w-[120px] px-4 py-2 rounded-lg font-medium transition
-          ${
-            activeTab === "staff"
+          ${activeTab === "staff"
               ? "bg-white text-[#2f3699]"
               : "text-white"
-          }`}
+            }`}
         >
           Staff Type
         </button>
@@ -72,7 +69,7 @@ export default function GateSettings() {
             </div>
 
 
-            <button className="flex items-center gap-2 bg-blue-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 text-sm rounded shadow hover:bg-blue-700 transition">
+            <button className="bg-blue-500 text-white px-4 py-2 text-sm sm:w-auto rounded shadow hover:bg-blue-700 ">
 
               <Plus size={16} />
               Add
@@ -150,7 +147,7 @@ export default function GateSettings() {
             </div>
 
 
-            <button className="flex items-center gap-2 bg-blue-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 text-sm rounded shadow hover:bg-blue-700 transition">
+            <button className="bg-blue-500 text-white px-4 py-2 text-sm sm:w-auto rounded shadow hover:bg-blue-700">
 
               <Plus size={16} />
               Add
@@ -211,7 +208,7 @@ export default function GateSettings() {
             </div>
 
 
-            <button className="flex items-center gap-2 bg-blue-700 text-white px-3 py-1.5 sm:px-4 sm:py-2 text-sm rounded shadow hover:bg-blue-700 transition">
+            <button className="bg-blue-500 text-white px-4 py-2 text-sm w-full sm:w-auto rounded shadow hover:bg-blue-700">
 
               <Plus size={16} />
               Add

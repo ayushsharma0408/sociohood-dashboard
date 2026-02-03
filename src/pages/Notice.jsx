@@ -162,7 +162,7 @@ export default function Notice() {
 
             {/* ================= TABS + ADD NOTICE ================= */}
 
-            <div className="flex justify-between items-center mb-5 flex-wrap gap-3">
+            <div className="flex justify-between items-center mb-5 flex-wrap gap-3 p-4">
 
 
                 {/* LEFT: TABS */}
@@ -230,7 +230,7 @@ export default function Notice() {
 
             {/* ================= NOTICE CARDS ================= */}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-col-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-col-3 gap-4 p-4">
 
 
                 {notices.map((item) => (
@@ -362,6 +362,7 @@ export default function Notice() {
             overflow-y-auto
             mt-10
             mb-10
+            
           ">
 
 

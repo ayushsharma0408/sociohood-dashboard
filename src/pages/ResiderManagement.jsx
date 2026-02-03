@@ -5,9 +5,9 @@ export default function ResiderManagement() {
     <div className="space-y-6 px-2 sm:px-4 md:px-0">
 
       {/* ====== Header ====== */}
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+      <div className="bg-white rounded-xl shadow p-5">
 
-        <h2 className="text-base sm:text-lg font-semibold text-gray-700 truncate">
+        <h2 className="text-lg font-semibold text-black-700 mb-4">
           Gate Management &gt; <span className="text-black">Resider</span>
         </h2>
 
@@ -30,37 +30,37 @@ export default function ResiderManagement() {
 
 
       {/* ====== Filters ====== */}
-      <div className="bg-white rounded-xl shadow p-3 sm:p-4 flex flex- col sm:flex-row flex-wrap gap-3 item-start sm:items-end">
+      <div className="flex flex-col lg:flex-row lg:items-end gap-4">
 
-        <div className="w-full sm:auto">
-          <label className="text-sm text-gray-500">
+        <div className="text-sm text-black-600 ">
+          <span className="text-sm font-medium whitespace-nowrap">
             Start Date
-          </label>
+          </span>
 
           <input
             type="date"
-            className="block border rounded-lg px-3 py-1.5 mt-1 text-sm w-full"
+            className="block border rounded px-3 py-2 mt-1  sm:w-auto"
           />
         </div>
 
-        <div className="w-full sm:w-auto">
-          <label className="text-sm text-gray-500">
+        <div className="text-sm text-black-600">
+          <span className="text-sm font-medium whitespace-nowrap">
             End Date
-          </label>
+          </span>
 
           <input
             type="date"
-            className="block border rounded-lg px-3 py-1.5 mt-1 text-sm w-full"
+            className="block border rounded px-3 py-2 mt-1  sm:w-auto"
           />
         </div>
 
-        <div className="flex gap-2 w-full sm:w-auto">
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm flex-1 sm:flex-none">
+        <div className="bg-white rounded-xl shadow p-5">
+        <button className="bg-blue-500 text-white px-6 py-2 text-sm  sm:w-auto rounded shadow hover:bg-blue-700">
           FIND
         </button>
 
-        <button className="bg-gray-100 px-4 py-2 rounded-lg text-sm flex items-center gap-2 flex-1 sm:flex-none">
-          <RefreshCw size={16} />
+        <button className="bg-gray-500 text-white px-6 py-2 text-sm  sm:w-auto rounded shadow hover:bg-gray-600">
+        
           RESET
         </button>
         </div>

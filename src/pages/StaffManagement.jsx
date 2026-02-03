@@ -27,7 +27,7 @@ export default function StaffManagement() {
       {/* ================= HEADER ================= */}
       <div className="bg-white rounded-xl shadow p-5">
 
-        <h2 className="text-lg font-semibold text-gray-700 mb-4">
+        <h2 className="text-lg font-semibold text-black-700 mb-4">
           Gate Management &gt; Staff
         </h2>
 
@@ -52,7 +52,7 @@ export default function StaffManagement() {
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              className="block border rounded px-3 py-2 mt-1"
+              className="block border rounded px-3 py-2 mt-1 w-full sm:w-auto"
             />
           </div>
 

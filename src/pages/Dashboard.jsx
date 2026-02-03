@@ -29,7 +29,7 @@ export default function Dashboard() {
                   Stay updated on every step, from submission to resolution.
                 </p>
 
-                <button className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+                <button className="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
                   Get Started
                 </button>
 
